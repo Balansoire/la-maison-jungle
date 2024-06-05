@@ -1,6 +1,6 @@
 # La Maison Jungle
 
-Ce projet est une page simple pour montrer les utilisations de React. Il a été créé à partir du code de base du cours React OpenClassrooms disponible à l'adresse : [OpenClassrooms - Débutez avec React](https://openclassrooms.com/fr/courses/7008001-debutez-avec-react).
+Ce projet est une page simple pour montrer les utilisations de React et Redux. Il a été créé à partir du code de base du cours React OpenClassrooms disponible à l'adresse : [OpenClassrooms - Débutez avec React](https://openclassrooms.com/fr/courses/7008001-debutez-avec-react).
 
 ## Scripts Disponibles
 
