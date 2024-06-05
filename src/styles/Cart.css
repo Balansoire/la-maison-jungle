@@ -8,6 +8,21 @@
 	width: 300px;
 }
 
+.lmj-cart textarea {
+	min-height: 1.5em;
+	resize:vertical;
+}
+
+.lmj-cart #add-plant {
+	background-color: #31b572;
+	color: white;
+	border: none;
+	padding: 8px;
+	margin-top: 8px;
+	cursor: pointer;
+
+}
+
 .lmj-cart-add-button {
 	margin-left: 32px;
 	cursor: pointer;
@@ -27,7 +42,9 @@
 
 .lmj-cart-closed {
 	padding: 32px;
-	width: 300px;
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 120px;
 }
 
 .lmj-cart-closed > button {

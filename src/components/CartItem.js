@@ -1,12 +1,16 @@
-function CartItem ({name, price, amount, cart, updateCart}) {
-    function removeItem(name) {
-        const plantIndex = cart.findIndex((plant) => plant.name === name)
-        updateCart(cart.filter((plant, index) => index !== plantIndex))
+import { useDispatch } from 'react-redux'
+import { removeItem } from '../features/cartSlice'
+
+function CartItem ({name, price, amount}) {
+	const dispatch = useDispatch()
+
+    function handleRemoveItem(name) {
+        dispatch(removeItem(name))
     }
 
     return (
         <div>
-            {name} {price}€ x {amount} <button style={{color: 'red'}} onClick={() => removeItem(name)}>X</button>
+            {name} {price}€ x {amount} <button style={{color: 'red'}} onClick={() => handleRemoveItem(name)}>X</button>
         </div>
     )
 }

@@ -1,12 +1,10 @@
 .lmj-banner {
 	color: black;
-	text-align: right;
-	padding: 32px;
 	border-bottom: solid 3px black;
 	display: flex;
-	justify-content: flex-end;
-	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
+	padding: 20px 50px;
 }
 
 .lmj-title {
@@ -16,4 +14,21 @@
 .lmj-logo {
 	height: 45px;
 	width: 45px;
+}
+
+.lmj-nav li{
+	list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.navLink {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+.navLink:hover, .active{
+	color: #31b572;
+	transition: all 0.3s ease 0s;
 }

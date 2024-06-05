@@ -1,17 +1,28 @@
 import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { emptyCart } from '../features/cartSlice'
 import CartItem from './CartItem'
 import '../styles/Cart.css'
 
-function Cart({ cart, updateCart }) {
+function Cart() {
+	const cart = useSelector((state) => state.cart.cart)
+	const dispatch = useDispatch()
+
 	const [isOpen, setIsOpen] = useState(true)
-	const items = Object.keys(cart)
-	const total = items.reduce(
-		(acc, item) => acc + cart[item].amount * cart[item].price,
+	const total = cart.reduce(
+		(acc, plant) => acc + plant.price * plant.amount,
 		0
 	)
 	useEffect(() => {
 		document.title = `LMJ: ${total}€ d'achats`
 	}, [total])
+	useEffect(() => {
+		localStorage.setItem('cart', JSON.stringify(cart))
+	})
+
+	function handleEmptyCart() {
+		dispatch(emptyCart())
+	}
 
 	return isOpen ? (
 		<div className='lmj-cart'>
@@ -26,11 +37,11 @@ function Cart({ cart, updateCart }) {
 					<h2>Panier</h2>
 					<ul>
 						{cart.map(({ name, price, amount }, index) => (
-							<CartItem key={`${name}-${index}`} name={name} price={price} amount={amount} index={index} cart={cart} updateCart={updateCart} />
+							<CartItem key={`${name}-${index}`} name={name} price={price} amount={amount} index={index} />
 						))}
 					</ul>
 					<h3>Total :{total}€</h3>
-					<button onClick={() => updateCart([])}>Vider le panier</button>
+					<button onClick={() => handleEmptyCart()}>Vider le panier</button>
 				</div>
 			) : (
 				<div>Votre panier est vide</div>
