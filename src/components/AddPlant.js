@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { addPlant } from "../features/plantSlice";
 import { useDispatch } from 'react-redux'
 import '../styles/Cart.css'
+
 
 
 function AddPlant() {
@@ -18,12 +19,19 @@ function AddPlant() {
     }
     const [isOpen, setIsOpen] = useState(true)
 
+    function plantNotValid(plant) {
+        return plant.name === '' || plant.category === '' || plant.id === '' || plant.light === '' || plant.water === '' || plant.cover === '' || plant.price === '' || plant.info === ''
+    }
+    function FormInput({title, type}) {
+        return (
+            <>
+                <p>{title} :</p><input type='text' placeholder={title} onChange={(e) => handleInput(type, e.target.value)} />
+            </>
+        )
+    }
     function handleInput(key, value) {
         inputPlant[key] = value
         console.log(inputPlant)
-    }
-    function plantNotValid(plant) {
-        return plant.name === '' || plant.category === '' || plant.id === '' || plant.light === '' || plant.water === '' || plant.cover === '' || plant.price === '' || plant.info === ''
     }
     function handleAddPlant() {
         if(plantNotValid(inputPlant)) {
@@ -43,14 +51,14 @@ function AddPlant() {
 				Fermer
 			</button>
             <h2>Ajouter une plante</h2>
-            <p>Nom: </p><input type='text' placeholder='Nom' onChange={(e) => handleInput('name', e.target.value)} />
-            <p>Catégorie: </p><input type='text' placeholder='Catégorie' onChange={(e) => handleInput('category', e.target.value)} />
-            <p>Id: </p><input type='text' placeholder='Id' onChange={(e) => handleInput('id', e.target.value)} />
-            <p>Luminosité: </p><input type='text' placeholder='Luminosité' onChange={(e) => handleInput('light', e.target.value)} />
-            <p>Arrosage: </p><input type='text' placeholder='Arrosage' onChange={(e) => handleInput('water', e.target.value)} />
-            <p>Image: </p><textarea placeholder='Image' onChange={(e) => handleInput('cover', e.target.value)} />
-            <p>Prix: </p><input type='text' placeholder='Prix' onChange={(e) => handleInput('price', e.target.value)} />
-            <p>Description: </p><textarea placeholder='Description' onChange={(e) => handleInput('info', e.target.value)} />
+            <FormInput title='Nom' type='name' />
+            <FormInput title='Catégorie' type='category' />
+            <FormInput title='Id' type='id' />
+            <FormInput title='Luminosité' type='light' />
+            <FormInput title='Arrosage' type='water' />
+            <FormInput title='Image' type='cover' />
+            <FormInput title='Prix' type='price' />
+            <FormInput title='Description' type='info' />
             <button id='add-plant' onClick={() => handleAddPlant()} >Ajouter</button>
         </div>
     ) : (
