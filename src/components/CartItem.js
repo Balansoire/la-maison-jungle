@@ -1,8 +1,9 @@
 import { useDispatch } from 'react-redux'
 import { removeItem } from '../features/cartSlice'
+import PropTypes from 'prop-types';
 
 function CartItem ({name, price, amount}) {
-	const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     function handleRemoveItem(name) {
         dispatch(removeItem(name))
@@ -14,5 +15,11 @@ function CartItem ({name, price, amount}) {
         </div>
     )
 }
+
+CartItem.propTypes = {
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    amount: PropTypes.number.isRequired
+};
 
 export default CartItem

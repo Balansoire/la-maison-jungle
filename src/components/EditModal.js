@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { editPlant } from '../features/plantSlice'
 import '../styles/Modal.css'
+
 
 function EditModal({plant, setModal}) {
     const [inputValue, setInputValue] = useState(plant)
@@ -32,12 +34,17 @@ function EditModal({plant, setModal}) {
                             )
                         })
                     }
-                    <button onClick={() => handleSave(plant)} >Sauvegarder</button>
+                    <button onClick={() => handleSave()} >Sauvegarder</button>
                 </div>
                 <button className='close-modal' onClick={() => setModal({isVisible:false})} >CLOSE</button>
             </div>
         </div>
     )
+}
+
+EditModal.propTypes = {
+    plant: PropTypes.object.isRequired,
+    setModal: PropTypes.func.isRequired
 }
 
 export default EditModal

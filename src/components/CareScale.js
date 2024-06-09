@@ -1,5 +1,6 @@
 import Sun from '../assets/sun.svg'
 import Water from '../assets/water.svg'
+import PropTypes from 'prop-types';
 
 const quantityLabel = {
 	1: 'peu',
@@ -35,6 +36,11 @@ function CareScale({ scaleValue, careType }) {
 			)}
 		</div>
 	)
+}
+	
+CareScale.propTypes = {
+  scaleValue: PropTypes.number.isRequired,
+  careType: PropTypes.string.isRequired
 }
 
 export default CareScale

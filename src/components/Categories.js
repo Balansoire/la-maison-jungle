@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Select from 'react-select'
 import '../styles/Categories.css'
 
@@ -15,5 +16,11 @@ function Categories({ setActiveCategories, categories, activeCategories }) {
 		</div>
 	)
 }
+
+Categories.propTypes = {
+	setActiveCategories: PropTypes.func.isRequired,
+	categories: PropTypes.array.isRequired,
+	activeCategories: PropTypes.array.isRequired
+};
 
 export default Categories

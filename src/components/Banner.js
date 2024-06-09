@@ -1,4 +1,6 @@
-import '../styles/Banner.css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../styles/Banner.css';
 
 function Banner({ children }) {
 	return (
@@ -6,4 +8,8 @@ function Banner({ children }) {
 	)
 }
 
-export default Banner
+Banner.propTypes = {
+	children: PropTypes.node.isRequired
+};
+
+export default Banner;

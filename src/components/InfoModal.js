@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../styles/Modal.css'
 
 function InfoModal({name, info, cover, setModal}) {
@@ -14,6 +15,13 @@ function InfoModal({name, info, cover, setModal}) {
             </div>
         </div>
     )
+}
+
+InfoModal.propTypes = {
+    name: PropTypes.string.isRequired,
+    info: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired,
+    setModal: PropTypes.func.isRequired
 }
 
 export default InfoModal
