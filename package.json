@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
+    "server-start": "json-server --watch src/datas/db.json --port 3001",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test",
     "eject": "react-scripts --openssl-legacy-provider eject"
