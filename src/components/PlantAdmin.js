@@ -13,11 +13,20 @@ function PlantAdmin() {
 	const dispatch = useDispatch()
 
 	const [activeCategories, setActiveCategories] = useState([])
-	const categories = plantList.reduce(
-		(acc, plant) =>
-			acc.includes(plant.category) ? acc : acc.concat(plant.category),
-		[]
-	)
+	let categories
+	try {
+		categories = plantList.reduce(
+			(acc, plant) =>
+				acc.includes(plant.category) ? acc : acc.concat(plant.category),
+			[]
+		)
+		console.log('categories worked with plantList:');
+		console.log(plantList);
+	} catch (e) {
+		console.log(plantList)
+		console.log(e)
+		categories = []
+	}
 	const [modal, setModal] = useState({isVisible:false, name:'', cover:'', info:''})
 
 	function handleRemove(plant) {

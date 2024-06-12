@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { initializePlantList } from '../features/plantSlice'
 import Banner from './Banner'
 import logo from '../assets/logo.png'
 import ShoppingList from './ShoppingList'
@@ -7,8 +9,14 @@ import About from './About'
 import Reset from './Reset'
 import Footer from './Footer'
 import '../styles/Layout.css'
+import { useEffect } from 'react'
 
 function App() {
+	const dispatch = useDispatch()
+
+	useEffect(() => {
+		dispatch(initializePlantList())
+	}, [dispatch])
 	return (
 		<BrowserRouter>
 			<div>

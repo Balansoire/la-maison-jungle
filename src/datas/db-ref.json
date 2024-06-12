@@ -1,185 +1,184 @@
 {
-    "plantList": [
-      {
-        "name": "monstera",
-        "category": "classique",
-        "id": "1ed",
-        "light": 2,
-        "water": 3,
-        "cover": "../assets/monstera.jpg",
-        "price": 15,
-        "info": "Le Monstera est une plante tropicale spectaculaire, connue pour ses grandes feuilles découpées. Facile d'entretien, elle apporte une touche exotique à n'importe quelle pièce. C'est la plante parfaite pour créer une atmosphère de jungle urbaine."
-      },
-      {
-        "name": "ficus lyrata",
-        "category": "classique",
-        "id": "2ab",
-        "light": 3,
-        "water": 1,
-        "cover": "../assets/lyrata.jpg",
-        "price": 16,
-        "info": "Le Ficus Lyrata, ou figuier lyre, est apprécié pour ses grandes feuilles brillantes en forme de lyre. Cette plante majestueuse est idéale pour ajouter une note d'élégance et de verdure dans votre maison."
-      },
-      {
-        "name": "pothos argenté",
-        "category": "classique",
-        "id": "3sd",
-        "light": 1,
-        "water": 2,
-        "cover": "../assets/pothos.jpg",
-        "price": 9,
-        "info": "Le Pothos Argenté est une plante grimpante robuste, parfaite pour les débutants. Ses feuilles marbrées d'argent ajoutent de la luminosité à votre espace intérieur tout en demandant peu d'entretien."
-      },
-      {
-        "name": "calathea",
-        "category": "classique",
-        "id": "4kk",
-        "light": 2,
-        "water": 3,
-        "cover": "../assets/calathea.jpg",
-        "price": 20,
-        "info": "La Calathea est une plante aux feuilles magnifiquement décorées. Elle est parfaite pour apporter une touche artistique à votre intérieur. Ses feuilles se replient la nuit, ajoutant une dynamique unique à votre espace."
-      },
-      {
-        "name": "olivier",
-        "category": "extérieur",
-        "id": "5pl",
-        "light": 3,
-        "water": 1,
-        "cover": "../assets/olivier.jpg",
-        "price": 25,
-        "info": "L'Olivier est un symbole de paix et de longévité. Facile à entretenir, il peut vivre très longtemps et s'adapte bien aux climats ensoleillés. C'est l'arbre parfait pour votre jardin ou balcon."
-      },
-      {
-        "name": "cactus",
-        "category": "plante grasse",
-        "id": "8fp",
-        "light": 2,
-        "water": 1,
-        "cover": "../assets/cactus.jpg",
-        "price": 6,
-        "info": "Le Cactus est une plante grasse très résistante, idéale pour les personnes ayant peu de temps pour l'entretien. Avec ses formes variées et son allure exotique, il apporte une touche de désert à votre décoration."
-      },
-      {
-        "name": "basilique",
-        "category": "extérieur",
-        "id": "7ie",
-        "light": 2,
-        "water": 3,
-        "cover": "../assets/basil.jpg",
-        "price": 5,
-        "info": "Le Basilic est une plante aromatique essentielle pour toute cuisine. Facile à cultiver, il ajoute une saveur fraîche et parfumée à vos plats. Parfait pour les amateurs de cuisine méditerranéenne."
-      },
-      {
-        "name": "succulente",
-        "category": "plante grasse",
-        "id": "9vn",
-        "light": 2,
-        "water": 1,
-        "cover": "../assets/succulent.jpg",
-        "price": 8,
-        "info": "Les Succulentes sont des plantes grasses adorables et faciles à entretenir. Elles viennent dans une variété de formes et de couleurs, parfaites pour ajouter une touche moderne et tendance à votre maison."
-      },
-      {
-        "name": "menthe",
-        "category": "extérieur",
-        "id": "6uo",
-        "light": 2,
-        "water": 2,
-        "cover": "../assets/mint.jpg",
-        "price": 4,
-        "info": "La Menthe est une plante aromatique polyvalente, idéale pour les thés, les cocktails et les plats culinaires. Elle pousse rapidement et ajoute une touche de fraîcheur à vos recettes."
-      },
-      {
-        "name": "aloe vera",
-        "category": "plante médicinale",
-        "id": "10xy",
-        "light": 3,
-        "water": 1,
-        "cover": "../assets/aloe.jpg",
-        "price": 12,
-        "info": "L'aloe vera est une plante succulente aux nombreuses vertus médicinales. Elle est facile à entretenir et idéale pour les débutants."
-      },
-      {
-        "name": "lavande",
-        "category": "plante aromatique",
-        "id": "11yz",
-        "light": 3,
-        "water": 1,
-        "cover": "../assets/lavender.jpg",
-        "price": 15,
-        "info": "La lavande est connue pour son parfum apaisant et ses propriétés aromatiques. Parfaite pour les jardins et les pots d'intérieur."
-      },
-      {
-        "name": "romarin",
-        "category": "plante aromatique",
-        "id": "12ab",
-        "light": 3,
-        "water": 1,
-        "cover": "../assets/rosemary.jpg",
-        "price": 7,
-        "info": "Le romarin est une plante aromatique polyvalente qui peut être utilisée en cuisine. Elle est également décorative et facile à cultiver."
-      },
-      {
-        "name": "bonsai",
-        "category": "art botanique",
-        "id": "13cd",
-        "light": 2,
-        "water": 2,
-        "cover": "../assets/bonsai.jpg",
-        "price": 40,
-        "info": "Le bonsaï est un art vivant qui demande patience et soin. Parfait pour les amateurs de plantes qui aiment les défis."
-      },
-      {
-        "name": "fougère",
-        "category": "plante d'ombre",
-        "id": "14ef",
-        "light": 1,
-        "water": 2,
-        "cover": "../assets/fern.jpg",
-        "price": 10,
-        "info": "La fougère est une plante d'intérieur idéale pour les zones ombragées. Elle apporte une touche de verdure luxuriante à tout espace."
-      },
-      {
-        "name": "plante serpent",
-        "category": "plante d'intérieur",
-        "id": "15gh",
-        "light": 2,
-        "water": 1,
-        "cover": "../assets/snakePlant.jpg",
-        "price": 18,
-        "info": "La plante serpent, aussi connue sous le nom de Sansevieria, est très résistante et parfaite pour les débutants."
-      },
-      {
-        "name": "plante de jade",
-        "category": "plante succulente",
-        "id": "16ij",
-        "light": 3,
-        "water": 1,
-        "cover": "../assets/jadePlant.jpg",
-        "price": 20,
-        "info": "La plante de jade est une succulente facile à entretenir qui est aussi considérée comme un symbole de chance et de prospérité."
-      },
-      {
-        "name": "orchidée",
-        "category": "plante fleurie",
-        "id": "17kl",
-        "light": 2,
-        "water": 2,
-        "cover": "../assets/orchid.jpg",
-        "price": 22,
-        "info": "L'orchidée est une plante fleurie élégante qui nécessite un peu de soin mais offre des fleurs magnifiques en retour."
-      },
-      {
-        "name": "broméliacée",
-        "category": "plante tropicale",
-        "id": "18mn",
-        "light": 2,
-        "water": 2,
-        "cover": "../assets/bromeliad.jpg",
-        "price": 25,
-        "info": "La broméliacée est une plante tropicale aux couleurs vives, parfaite pour ajouter une touche exotique à votre intérieur."
-      }
-    ]
-  }
-  
+  "plantList": [
+    {
+      "id": "1",
+      "name": "monstera",
+      "category": "classique",
+      "light": 2,
+      "water": 3,
+      "cover": "https://www.lovethegarden.com/sites/default/files/styles/scale_fallback/public/content/shutterstock_1549488503.jpg.jpeg?itok=-aN793hh",
+      "price": 15,
+      "info": "Le Monstera est une plante tropicale spectaculaire, connue pour ses grandes feuilles découpées. Facile d'entretien, elle apporte une touche exotique à n'importe quelle pièce. C'est la plante parfaite pour créer une atmosphère de jungle urbaine."
+    },
+    {
+      "id": "2",
+      "name": "ficus lyrata",
+      "category": "classique",
+      "light": 3,
+      "water": 1,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn58rRyT29EoRIstjnFRmS0XGghvIdR4BpQg&s",
+      "price": 16,
+      "info": "Le Ficus Lyrata, ou figuier lyre, est apprécié pour ses grandes feuilles brillantes en forme de lyre. Cette plante majestueuse est idéale pour ajouter une note d'élégance et de verdure dans votre maison."
+    },
+    {
+      "id": "3",
+      "name": "pothos argenté",
+      "category": "classique",
+      "light": 1,
+      "water": 2,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0PLGuTJSoZWVGev5fzOxVd23BAyTIqSp7AA&s",
+      "price": 9,
+      "info": "Le Pothos Argenté est une plante grimpante robuste, parfaite pour les débutants. Ses feuilles marbrées d'argent ajoutent de la luminosité à votre espace intérieur tout en demandant peu d'entretien."
+    },
+    {
+      "id": "4",
+      "name": "calathea",
+      "category": "classique",
+      "light": 2,
+      "water": 3,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE_32s0ujjFEQOkYXxu57-jPy-hdD5vjs71Q&s",
+      "price": 20,
+      "info": "La Calathea est une plante aux feuilles magnifiquement décorées. Elle est parfaite pour apporter une touche artistique à votre intérieur. Ses feuilles se replient la nuit, ajoutant une dynamique unique à votre espace."
+    },
+    {
+      "id": "5",
+      "name": "olivier",
+      "category": "extérieur",
+      "light": 3,
+      "water": 1,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtXUeP5Unm0TSDIAEkto82yk6wTyS9AhSxVw&s",
+      "price": 25,
+      "info": "L'Olivier est un symbole de paix et de longévité. Facile à entretenir, il peut vivre très longtemps et s'adapte bien aux climats ensoleillés. C'est l'arbre parfait pour votre jardin ou balcon."
+    },
+    {
+      "id": "6",
+      "name": "menthe",
+      "category": "extérieur",
+      "light": 2,
+      "water": 2,
+      "cover": "https://catalog-media.lafourche.fr/la-fourche-menthe-en-pot-bio-origine-france-1-unite-e37c4efc45d2879c1db9ebf97bb982438ea19aad.jpg",
+      "price": 4,
+      "info": "La Menthe est une plante aromatique polyvalente, idéale pour les thés, les cocktails et les plats culinaires. Elle pousse rapidement et ajoute une touche de fraîcheur à vos recettes."
+    },
+    {
+      "id": "7",
+      "name": "basilique",
+      "category": "extérieur",
+      "light": 2,
+      "water": 3,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRqycShqOKzrxmo52YkihivtImGQN8XG8A_g&s",
+      "price": 5,
+      "info": "Le Basilic est une plante aromatique essentielle pour toute cuisine. Facile à cultiver, il ajoute une saveur fraîche et parfumée à vos plats. Parfait pour les amateurs de cuisine méditerranéenne."
+    },
+    {
+      "id": "8",
+      "name": "cactus",
+      "category": "plante grasse",
+      "light": 2,
+      "water": 1,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOA2zv0Scg9MC8-8OWNS1YNouUag3GrLoD4A&s",
+      "price": 6,
+      "info": "Le Cactus est une plante grasse très résistante, idéale pour les personnes ayant peu de temps pour l'entretien. Avec ses formes variées et son allure exotique, il apporte une touche de désert à votre décoration."
+    },
+    {
+      "id": "9",
+      "name": "succulente",
+      "category": "plante grasse",
+      "light": 2,
+      "water": 1,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQptlV-Vyv6TvUWB0JrSz7qCShn7XUAAPSiLQ&s",
+      "price": 8,
+      "info": "Les Succulentes sont des plantes grasses adorables et faciles à entretenir. Elles viennent dans une variété de formes et de couleurs, parfaites pour ajouter une touche moderne et tendance à votre maison."
+    },
+    {
+      "id": "10",
+      "name": "aloe vera",
+      "category": "plante médicinale",
+      "light": 3,
+      "water": 1,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ5VX3Nzoj4t1wxa08tBMDat_ipVpPqf_Stw&s",
+      "price": 12,
+      "info": "L'aloe vera est une plante succulente aux nombreuses vertus médicinales. Elle est facile à entretenir et idéale pour les débutants."
+    },
+    {
+      "id": "11",
+      "name": "lavande",
+      "category": "plante aromatique",
+      "light": 3,
+      "water": 1,
+      "cover": "https://botanic-botanic-storage.omn.proximis.com/Imagestorage/imagesSynchro/500/1600/8acb35c0df3ea6dce873ed92850433c39ecaa6e9_1535884.png",
+      "price": 15,
+      "info": "La lavande est connue pour son parfum apaisant et ses propriétés aromatiques. Parfaite pour les jardins et les pots d'intérieur."
+    },
+    {
+      "id": "12",
+      "name": "romarin",
+      "category": "plante aromatique",
+      "light": 3,
+      "water": 1,
+      "cover": "https://shop.majardinerie.com/182-large_default/romarin-pot-de-13cm.jpg",
+      "price": 7,
+      "info": "Le romarin est une plante aromatique polyvalente qui peut être utilisée en cuisine. Elle est également décorative et facile à cultiver."
+    },
+    {
+      "id": "13",
+      "name": "bonsai",
+      "category": "art botanique",
+      "light": 2,
+      "water": 2,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzOJadNNiqVN05HT7LfclXQ10ixkpMjrOp4A&s",
+      "price": 40,
+      "info": "Le bonsaï est un art vivant qui demande patience et soin. Parfait pour les amateurs de plantes qui aiment les défis."
+    },
+    {
+      "id": "14",
+      "name": "fougère",
+      "category": "plante d'ombre",
+      "light": 1,
+      "water": 2,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUlqpMmve5fHRf3SR8FZdebpHvxdThzezqVg&s",
+      "price": 10,
+      "info": "La fougère est une plante d'intérieur idéale pour les zones ombragées. Elle apporte une touche de verdure luxuriante à tout espace."
+    },
+    {
+      "id": "15",
+      "name": "plante serpent",
+      "category": "plante d'intérieur",
+      "light": 2,
+      "water": 1,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiWzc-JcSVnAK7a6EtB4gTll5_yHuo8B8Flw&s",
+      "price": 18,
+      "info": "La plante serpent, aussi connue sous le nom de Sansevieria, est très résistante et parfaite pour les débutants."
+    },
+    {
+      "id": "16",
+      "name": "plante de jade",
+      "category": "plante succulente",
+      "light": 3,
+      "water": 1,
+      "cover": "https://www.jardiner-malin.fr/wp-content/uploads/2013/03/arbre-de-jade-.jpg",
+      "price": 20,
+      "info": "La plante de jade est une succulente facile à entretenir qui est aussi considérée comme un symbole de chance et de prospérité."
+    },
+    {
+      "id": "17",
+      "name": "orchidée",
+      "category": "plante fleurie",
+      "light": 2,
+      "water": 2,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-kAQm_Bj_6SpRNeMZVrNC4kMmkOAGNlggw&s",
+      "price": 22,
+      "info": "L'orchidée est une plante fleurie élégante qui nécessite un peu de soin mais offre des fleurs magnifiques en retour."
+    },
+    {
+      "id": "18",
+      "name": "broméliacée",
+      "category": "plante tropicale",
+      "light": 2,
+      "water": 2,
+      "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYbdZ3jmLwHlBN7qL8CnHq-wGCMmwIGesGg&s",
+      "price": 25,
+      "info": "La broméliacée est une plante tropicale aux couleurs vives, parfaite pour ajouter une touche exotique à votre intérieur."
+    }
+  ]
+}

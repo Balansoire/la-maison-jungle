@@ -1,50 +1,86 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { plantList } from '../datas/plantList';
+import { createSlice } from '@reduxjs/toolkit'
+import ref from '../datas/db-ref.json'
 
 const initialState = {
-  plantList: localStorage.getItem('plantList') ? JSON.parse(localStorage.getItem('plantList')) : plantList
+  plantList: []
 };
+
+function fetchPlantList() {
+  return fetch('http://localhost:3001/plantList')
+  .then((response) => response.json())
+  .catch((error) => {
+    console.error('An error occurred while fetching:', error);
+  });
+}
+
+async function sendPlantList(plantList) {
+  fetch('http://localhost:3001/plantList', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(plantList)
+  })
+  .then((response) => response.json())
+  .catch((error) => {
+    console.error('An error occurred while sending plant list:', error);
+  });
+}
 
 const plantSlice = createSlice({
   name: 'plantList',
   initialState,
   reducers: {
+    setPlantList(state, action) {
+      state.plantList = action.payload;
+    },
     addPlant(state, action) {
-      const plantInList = state.plantList.find(plant => plant.id === action.payload.id)
+      const plantInList = state.plantList.find(plant => plant.id === action.payload.id);
       if (plantInList) {
         alert('Une plante avec cet id existe déjà')
         return
       }
       state.plantList.push(action.payload);
-      saveToLocalStorage(state);
+      sendPlantList(state.plantList);
     },
     editPlant(state, action) {
-      console.log('action:')
       console.log(action)
-      state.plantList = state.plantList.filter(plant => plant.id !== action.payload.id);
-      state.plantList.push(action.payload);
-      saveToLocalStorage(state);
+      fetch(`http://localhost:3001/plantList/${action.payload.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(action.payload)
+      })
+      .then((response) => response.json())
+      .catch((error) => {
+        console.error('An error occurred while sending plant list:', error);
+      });
+      state.plantList = state.plantList.map(plant => plant.id === action.payload.id ? action.payload : plant);
+      console.log('Plant edited');
     },
     removePlant(state, action) {
+      fetch(`http://localhost:3001/plantList/${action.payload}`, {
+        method: 'DELETE'
+      })
+      .then((response) => response.json())
+      .catch((error) => {
+        console.error('An error occurred while sending plant list:', error);
+      });
       state.plantList = state.plantList.filter(plant => plant.id !== action.payload);
-      saveToLocalStorage(state);
     },
     resetPlantList(state) {
-      console.log('plantList before reset:')
-      console.log(state.plantList)
-      console.log('reset')
-      state.plantList = plantList;
-      saveToLocalStorage(state);
-      console.log('plantList after reset:')
-      console.log(state.plantList)
+      console.log(ref)
+      setPlantList(ref.plantList);
+      state.plantList = ref.plantList;
     }
   }
 });
 
-function saveToLocalStorage(state) {
-  const plantList = state.plantList;
-  localStorage.setItem('plantList', JSON.stringify(plantList));
-}
-
-export const { addPlant, editPlant, removePlant, resetPlantList } = plantSlice.actions;
+export const { setPlantList, addPlant, editPlant, removePlant, resetPlantList } = plantSlice.actions;
 export default plantSlice.reducer;
+
+export const initializePlantList = () => async dispatch => {
+  const plantList = await fetchPlantList();
+  dispatch(setPlantList(plantList));
+};

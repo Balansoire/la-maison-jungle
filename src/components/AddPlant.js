@@ -1,26 +1,24 @@
+import PropTypes from 'prop-types'
 import { useState } from 'react'
-import PropTypes from 'prop-types';
 import { addPlant } from "../features/plantSlice";
 import { useDispatch } from 'react-redux'
 import '../styles/Cart.css'
 
-const inputPlant = {
-    name: '',
-    category: '',
-    id: '',
-    light: '',
-    water: '',
-    cover: '',
-    price: '',
-    info: ''
-}
 
-function FormInput({title, type}) {
+function FormInput({title, type, dataType = 'text', inputValue, setInputValue}) {
     
 
     function handleInput(key, value) {
-        inputPlant[key] = value
-        console.log(inputPlant)
+        switch(dataType) {
+            case 'number':
+                value = Number(value)
+                break
+            case 'text':
+                value = String(value)
+                break
+            default: break
+        }
+        setInputValue({...inputValue, [key]:value})
     }
 
     return (
@@ -32,12 +30,36 @@ function FormInput({title, type}) {
 
 FormInput.propTypes = {
     title: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    dataType: PropTypes.string,
+    inputValue: PropTypes.object.isRequired,
+    setInputValue: PropTypes.func.isRequired
 };
 
+
 function AddPlant() {
+    const formInputs = [
+        {title: 'Id', type: 'id'},
+        {title: 'Nom', type: 'name'},
+        {title: 'Catégorie', type: 'category'},
+        {title: 'Luminosité', type: 'light'},
+        {title: 'Arrosage', type: 'water'},
+        {title: 'Image', type: 'cover'},
+        {title: 'Prix', type: 'price', dataType: 'number'},
+        {title: 'Description', type: 'info'}
+    ]
     const dispatch = useDispatch()
     const [isOpen, setIsOpen] = useState(true)
+    const [inputPlant, setInputPlant] = useState({
+        name: '',
+        category: '',
+        id: '',
+        light: '',
+        water: '',
+        cover: '',
+        price: 0,
+        info: ''
+    })
 
     function plantNotValid(plant) {
         return plant.name === '' || plant.category === '' || plant.id === '' || plant.light === '' || plant.water === '' || plant.cover === '' || plant.price === '' || plant.info === ''
@@ -60,14 +82,16 @@ function AddPlant() {
 				Fermer
 			</button>
             <h2>Ajouter une plante</h2>
-            <FormInput title='Nom' type='name' />
-            <FormInput title='Catégorie' type='category' />
-            <FormInput title='Id' type='id' />
-            <FormInput title='Luminosité' type='light' />
-            <FormInput title='Arrosage' type='water' />
-            <FormInput title='Image' type='cover' />
-            <FormInput title='Prix' type='price' />
-            <FormInput title='Description' type='info' />
+            {formInputs.map((input, index) => (
+                <FormInput 
+                    key={input.title+index}
+                    title={input.title}
+                    type={input.type}
+                    dataType={input.dataType}
+                    inputValue={inputPlant}
+                    setInputValue={setInputPlant}
+                />
+            ))}
             <button id='add-plant' onClick={() => handleAddPlant()} >Ajouter</button>
         </div>
     ) : (
