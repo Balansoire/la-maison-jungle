@@ -6,9 +6,11 @@ Ce projet est une page simple pour montrer les utilisations de React et Redux. I
 
 Dans le répertoire du projet, vous pouvez exécuter :
 
-### `npm install`
+### `npm run install` pour installer le projet et ses dépendances
 
-### `npm start`
+### `npm run start` pour démarer le coté client
+
+### `npm run server-start` pour démarer json-server
 
 Ouvrez <http://localhost:3000> pour la voir dans votre navigateur.
 
