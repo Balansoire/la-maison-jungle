@@ -10,7 +10,7 @@ Dans le répertoire du projet, vous pouvez exécuter :
 
 ### `npm start`
 
-Ouvrez http://localhost:3000 pour la voir dans votre navigateur.
+Ouvrez <http://localhost:3000> pour la voir dans votre navigateur.
 
 ## Technologies utilisées
 
@@ -24,7 +24,11 @@ Redux est intégré dans ce projet pour gérer l'état global de l'application. 
 
 ### LocalStorage
 
-Toutes les données (la liste des plantes et des articles dan le panier) sont stockées dans le `LocalStorage`, permettant de les garder en rechargeant la page ou en la fermant puis la rouvrant.
+Les articles dan le panier sont stockés dans le `LocalStorage`, permettant de les garder du coté client en rechargeant la page ou en la fermant puis la rouvrant.
+
+### json-server
+
+La liste des plantes est gérée par un serveur `json-server` qui permet de simuler une API REST pour récupérer et modifier les données. Cela permet de simuler un environnement de développement plus réaliste et de tester les fonctionnalités de l'application.
 
 ## Fonctionnalités Ajoutées
 
@@ -58,4 +62,4 @@ Ajouter une Plante : Un formulaire permettant d'ajouter une nouvelle plante à l
 Modifier une Plante : Une interface modale permettant de modifier les détails des plantes existantes.
 Réinitialiser la Liste: remet la liste des plantes dans son état initial afin de pouvoir démontrer facilement les fonctionnalités.
 
-Ces trois fonctionnalités sont basées sur l'utilisation de `Redux` afin de se synchroniser avec la liste de plantes dans la partie "magasin" du projet.
+Ces trois fonctionnalités sont basées sur l'utilisation de `Redux` afin de synchroniser la liste de plantes dans la partie "magasin" du projet. Elles appellent les API de `json-server` pour effectuer les modifications sur les données du coté serveur.
